@@ -1,0 +1,158 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 19, 2017, 2:04:35 PM
+    Author     : Frederick Javalera
+*/
+body 
+{
+    font-family: "Noto Sans","Raleway", Arial, sans-serif;
+    max-width: 100%;
+    width: 100%;
+}
+
+.w3-row
+{
+    background-color: #404040;
+    padding-top: 35px;
+    padding-bottom: 45px;
+    
+}
+
+header.w3-container.w3-xlarge.w3-padding-18
+{
+    background-color: #607D8B;
+}
+
+#about
+{   
+    /*sand*/
+    background-color: #FDF5E6;
+}
+
+.w3-card
+{
+    height: 360px;
+    width: 610px;
+    margin-bottom: 8px;
+}
+
+.w3-card.img-rounded
+{
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+footer
+{
+    max-width: 100%;
+}
+
+h2
+{
+    padding-left: 80px;
+}
+
+#aboutMeContents
+{
+    border-radius: 10px;
+}
+
+#copyright
+{
+    max-width: 100%;
+    background-color: #607D8B;
+    height: 30px;
+    color: white;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+}
+
+#submit
+{
+    border-radius: 5px;
+}
+
+#interestsDiv
+{
+    width: 33%;
+    float: left;
+}
+
+#bookDiv
+{
+    width: 33%;
+    float: left;
+}
+
+#movieDiv
+{
+    width: 33%;
+    float: left;
+}
+
+.card-img
+{
+    border-radius: 5px;
+    width: 100px;
+    height: 130px;
+}
+
+.card-img-overlay
+{
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    /*background-color: #2196F3;*/
+    background-color: #404040;
+    /*color: black;*/
+    color: white;
+    height: 260px;
+}
+
+#messageText
+{
+    line-height: 130px;
+    height: 130px;
+    word-wrap: break-word;
+    border-radius: 5px;
+    padding: 0px;
+}
+
+.w3-input
+{
+    border-radius: 5px;
+}
+
+.card
+{
+    background-color: white;
+    border-radius: 5px;
+}
+
+#cardInverse
+{
+    padding-top: 10px;
+    box-shadow: 3px 3px darkgrey;
+}
+
+/*interests, book, movie image*/
+.card-img
+{
+    box-shadow: 4px 4px darkgrey;
+}
+
+/*me image*/
+.img-rounded
+{
+    box-shadow: 3px 3px black;
+}
+
+*
+{
+    font-family: 'Noto Sans', sans-serif !important;
+}
