@@ -1,43 +1,33 @@
 <?php
 require_once 'DataBaseConnection.php';
+
 $first = htmlentities($_POST['first']);
-$first = stringtolower($_POST['first']);
-$first = ucwords($_POST['first']);
-//$first = $_POST['first'];
+$first = stringtolower($first);
+$first = ucwords($first);
 
 $last = htmlentities($_POST['last']);
-$last = stringtolower($_POST['last']);
-$last = ucwords($_POST['last']);
-//$last = $_POST['last'];
+$last = stringtolower($last);
+$last = ucwords($last);
 
 $phone = htmlentities($_POST['phone']);
-//$phone = $_POST['phone'];
 
 $address = htmlentities($_POST['address']);
-//$address = $_POST['address'];
 
 $city = htmlentities($_POST['city']);
-//$city = $_POST['city'];
 
 $state = htmlentities($_POST['state']);
-//$state = $_POST['state'];
 
 $zip = htmlentities($_POST['zip']);
-//$zip = $_POST['zip'];
 
 $birthDate = $_POST['birthDate'];
 
 $username = htmlentities($_POST['username']);
-//$username = $_POST['username'];
 
 $password = htmlentities($_POST['password']);
-//$password = $_POST['password'];
 
 $sex = htmlentities($_POST['sex']);
-//$sex = $_POST['sex'];
 
 $relationship = htmlentities($_POST['relationship']);
-//$relationship = $_POST['relationship'];
 
 $action = $_POST['action'];
 ?>
@@ -193,7 +183,7 @@ $action = $_POST['action'];
         <div class="container">
             <footer>
                 <div class="container" id="copyright">
-                    Copyright &copy; 2017 - All rights reserved - Frederick Javalera
+                    Copyright &copy; 2017 - All rights reserved - Fred Javalera
                 </div>
             </footer>
         </div>

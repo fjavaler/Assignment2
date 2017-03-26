@@ -277,7 +277,7 @@
 
         <!--copyright row-->
         <div class="container" id="copyright">
-            Copyright &copy; 2017 - All rights reserved - Frederick Javalera
+            Copyright &copy; 2017 - All rights reserved - Fred Javalera
         </div>
     </body>
 </html>
