@@ -104,7 +104,7 @@
             <br>
         </footer>
         <div class="container" id="copyright">
-            Copyright &copy; 2017 - All rights reserved - Fred Javalera
+            Copyright &copy; 2017 - All rights reserved - Frederick Javalera
         </div>
     </body>
 </html>
