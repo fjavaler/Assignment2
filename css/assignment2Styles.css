@@ -56,11 +56,6 @@ header.w3-container.w3-xlarge.w3-padding-18
     border-radius: 5px;
 }
 
-*
-{
-    font-family: 'Noto Sans', sans-serif !important;
-}
-
 #friendsPic
 {
     height: 400px;
@@ -133,4 +128,9 @@ header.w3-container.w3-xlarge.w3-padding-18
 table
 {
     text-align: left;
+}
+
+#fontSpan
+{
+    font-family: 'Gloria Hallelujah', cursive;
 }

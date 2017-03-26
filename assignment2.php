@@ -109,6 +109,7 @@
         <link rel="stylesheet" type="text/css" href="css/assignment2Styles.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+        <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
     </head>
     <body>
         <!-- !PAGE CONTENT! -->
@@ -140,7 +141,7 @@
         <!-- Footer and form -->
         <div class="container" id="footerContainer">
             <footer class="w3-padding-64 w3-center" id="friendsAndFamily">
-                <h1 style="color: #404040"><b>Friends and Family</b><br><br></h1>
+                <h1 style="color: #404040"><b><span id="fontSpan">Friends and Family</span></b><br><br></h1>
                 <p>Please enter the first and last name, or phone number, of the person whose contact information you are searching for.</p>
                 <p>Or feel free to create an account! Just fill out all of the fields below.</p>
                 <br><br>

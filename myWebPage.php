@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
         <link href="css/normalize.css" rel = "stylesheet" type = "text/css">
         <link rel="stylesheet" type="text/css" href="css/myWebpageStyles.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -46,7 +47,7 @@
 
         <!-- Footer / About Section -->
         <footer class="w3-padding-64 w3-center" id="about">
-            <h1 style="color: #404040"><b>About Me</b><br><br><br></h1>
+            <h1 style="color: #404040" id="fontSpan"><b>About Me</b><br><br><br></h1>
             <div id="aboutMeContents" class="container">
                 <div class="container" id="interestsDiv">
                     <div class="card card-inverse" id="cardInverse">
@@ -57,9 +58,11 @@
                             <p class="card-text">Welcome to my site.</p>
                             <p class="card-text">I'm into programming and all things
                                 tech.</p>
-                            <p class="card-text">I love learning and outdoor activities like hiking, biking, and running.</p>
+                            <p class="card-text">I love learning and outdoor activities like hiking,
+                                biking, and running.</p>
                             <p class="card-text">I'm currently enjoying
-                                learning about web development and hope to gain some cool skills from this class.</p>
+                                learning about web development and hope to gain some cool skills
+                                from this class.</p>
                         </div>
                     </div>
                 </div>
@@ -104,7 +107,7 @@
             <br>
         </footer>
         <div class="container" id="copyright">
-            Copyright &copy; 2017 - All rights reserved - Frederick Javalera
+            Copyright &copy; 2017 - All rights reserved - Fred Javalera
         </div>
     </body>
 </html>

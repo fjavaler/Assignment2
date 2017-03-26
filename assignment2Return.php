@@ -49,6 +49,7 @@ $action = $_POST['action'];
         <link rel="stylesheet" type="text/css" href="css/assignment2Styles.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+        <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
     </head>
     <body>
         <!-- !PAGE CONTENT! -->
@@ -110,16 +111,25 @@ $action = $_POST['action'];
                     if ($first != '')
                     {
                         //look for matching first name
-                        $search = "SELECT `First_Name`, `Last_Name`, `Phone_Number`, `Username`, `Address`, `City`, `State`, `Zip`, `Birthdate`, `Sex`, `Relationship` FROM `Assignment2` . `FriendDB` WHERE `First_Name` = '$first';";
+                        $search = "SELECT `First_Name`, `Last_Name`, `Phone_Number`, `Username`, "
+                                . "`Address`, `City`, `State`, `Zip`, `Birthdate`, `Sex`, "
+                                . "`Relationship` FROM `Assignment2` . `FriendDB` "
+                                . "WHERE `First_Name` = '$first';";
                         $return = $con->query($search);
-                        if ($return == FALSE)
+                        if (mysql_num_rows($return) == 0)
                         {
-                            $message = "No one with the first name" . $first . "was found.<br>";
-                            echo $Message;
-                            die('Invalid query: ' . mysqli_error($con));
+                            if ($return == false)
+                            {
+                                die('Invalid query: ' . mysqli_error($con));
+                            }
+                            $message = "No one with the first name " . $first . " was found.<br>";
+                            echo $message;
                         } else
                         {
-                            echo "<table class=\"table\"><th>Username</th><th>First Name</th><th>Last Name</th><th>Phone Number</th><th>Address</th><th>City</th><th>State</th><th>Zip</th><th>Birth Date</th><th>Sex</th><th>Relationship</th>";
+                            echo "<table class=\"table\"><th>Username</th><th>First Name</th>"
+                            . "<th>Last Name</th><th>Phone Number</th><th>Address</th><th>City</th>"
+                            . "<th>State</th><th>Zip</th><th>Birth Date</th><th>Sex</th>"
+                            . "<th>Relationship</th>";
                             while ($row = $return->fetch_assoc())
                             {
                                 echo "<tr><td>" . $row['Username']
@@ -141,16 +151,25 @@ $action = $_POST['action'];
                     } else if ($first = "" && $last != '')
                     {
                         //look for matching last name
-                        $search2 = "SELECT `First_Name`, `Last_Name`, `Phone_Number`, `Username`, `Address`, `City`, `State`, `Zip`, `Birthdate`, `Sex`, `Relationship` FROM `Assignment2` . `FriendDB` WHERE `Last_Name` = '$last';";
+                        $search2 = "SELECT `First_Name`, `Last_Name`, `Phone_Number`, "
+                                . "`Username`, `Address`, `City`, `State`, `Zip`, `Birthdate`, "
+                                . "`Sex`, `Relationship` FROM `Assignment2` . `FriendDB` "
+                                . "WHERE `Last_Name` = '$last';";
                         $return2 = $con->query($search2);
-                        if ($return2 == FALSE)
+                        if (mysql_num_rows($return2) == 0)
                         {
-                            $message2 = "No one with the last name" . $last . "was found.<br>";
-                            echo $Message2;
-                            die('Invalid query: ' . mysqli_error($con));
+                            if ($return2 == false)
+                            {
+                                die('Invalid query: ' . mysqli_error($con));
+                            }
+                            $message2 = "No one with the first name " . $last . " was found.<br>";
+                            echo $message2;
                         } else
                         {
-                            echo "<table class=\"table\"><th>Username</th><th>First Name</th><th>Last Name</th><th>Phone Number</th><th>Address</th><th>City</th><th>State</th><th>Zip</th><th>Birth Date</th><th>Sex</th><th>Relationship</th>";
+                            echo "<table class=\"table\"><th>Username</th><th>First Name</th>"
+                            . "<th>Last Name</th><th>Phone Number</th><th>Address</th><th>City</th>"
+                            . "<th>State</th><th>Zip</th><th>Birth Date</th><th>Sex</th>"
+                            . "<th>Relationship</th>";
                             while ($row2 = $return2->fetch_assoc())
                             {
                                 echo "<tr><td>" . $row2['Username']

@@ -152,7 +152,8 @@ h2
     box-shadow: 3px 3px black;
 }
 
-*
+/*about me font*/
+#fontSpan
 {
-    font-family: 'Noto Sans', sans-serif !important;
+    font-family: 'Gloria Hallelujah', cursive;
 }
