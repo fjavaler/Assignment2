@@ -25,6 +25,20 @@
                     document.myForm.last.focus();
                     return false;
                 }
+                //phone
+                if (document.myForm.phone.value == "")
+                {
+                    alert("Please provide your phone!");
+                    document.myForm.phone.focus();
+                    return false;
+                }
+                //address
+                if (document.myForm.address.value == "")
+                {
+                    alert("Please provide your address!");
+                    document.myForm.address.focus();
+                    return false;
+                }
                 //city
                 if (document.myForm.city.value == "")
                 {
@@ -48,18 +62,11 @@
                     document.myForm.zip.focus();
                     return false;
                 }
-                //phone
-                if (document.myForm.phone.value == "")
+                //birth date
+                if (document.myForm.birthDate.value == "")
                 {
-                    alert("Please provide your phone!");
-                    document.myForm.phone.focus();
-                    return false;
-                }
-                //address
-                if (document.myForm.address.value == "")
-                {
-                    alert("Please provide your address!");
-                    document.myForm.address.focus();
+                    alert("Please provide your birth date!");
+                    document.myForm.birthDate.focus();
                     return false;
                 }
                 //username
@@ -74,6 +81,13 @@
                 {
                     alert("Please provide your password!");
                     document.myForm.password.focus();
+                    return false;
+                }
+                //sex
+                if (document.myForm.sex.value == "")
+                {
+                    alert("Please provide your sex!");
+                    document.myForm.sex.focus();
                     return false;
                 }
                 //relationship
