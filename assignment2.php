@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-        </script>
         <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+        <script src="Assignment2/js/jquery-3.1.1.min.js">
+        </script>
+        <!-- Latest compiled JavaScript -->
+        <script src="Assignment2/js/bootstrap.min.js">
         </script>
         <script type="text/javascript">
             // Form validation code will come here.
@@ -104,12 +104,13 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-        <link rel="stylesheet" type = "text/css" href="css/normalize.css" >
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans"
+              rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/assignment2Styles.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
-        <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah"
+              rel="stylesheet">
     </head>
     <body>
         <!-- !PAGE CONTENT! -->
@@ -131,7 +132,8 @@
             <div class="w3-row">
                 <div class="w3-quarter w3-container"></div>
                 <div class="w3-quarter w3-container">
-                    <img src="/images/friendsAndFamily.png" id="friendsPic" class="img-rounded" alt="Friends and Family">
+                    <img src="/images/friendsAndFamily.png" id="friendsPic"
+                         class="img-rounded" alt="Friends and Family">
                 </div>
                 <div class="w3-quarter w3-container"></div>
                 <div class="w3-quarter w3-container"></div>
@@ -141,12 +143,16 @@
         <!-- Footer and form -->
         <div class="container" id="footerContainer">
             <footer class="w3-padding-64 w3-center" id="friendsAndFamily">
-                <h1 style="color: #404040"><b><span id="fontSpan">Friends and Family</span></b><br><br></h1>
-                <p>Please enter the first and last name, or phone number, of the person whose contact information you are searching for.</p>
-                <p>Or feel free to create an account! Just fill out all of the fields below.</p>
+                <h1 style="color: #404040"><b><span id="fontSpan">Friends and Family</span>
+                    </b><br><br></h1>
+                <p>Please enter the first and last name, or phone number, of
+                    the person whose contact information you are searching for.</p>
+                <p>Or feel free to create an account! Just fill out all of the
+                    fields below.</p>
                 <br><br>
                 <div class="container col-lg-3" id="tan">
-                    <form style="margin:auto;width:90%" method="post" role="form" name="myForm" action="assignment2Return.php">
+                    <form style="margin:auto;width:90%" method="post" role="form"
+                          name="myForm" action="assignment2Return.php">
                         <div class="container">
                             <div class="form-group">
                                 <label for="first">First Name:</label>
@@ -158,7 +164,8 @@
                             </div>
                             <div class="form-group">
                                 <label for="phone">Phone Number:</label>
-                                <input name="phone" type="text" class="form-control"  placeholder="(555) 555-5555">
+                                <input name="phone" type="text" class="form-control"
+                                       placeholder="(555) 555-5555">
                             </div>
                             <div class="form-group">
                                 <label for="address">Address:</label>
@@ -267,9 +274,12 @@
 
                         <!--buttons-->
                         <div class="btn-group">
-                            <button type="submit" value="Search" name="action" class="btn btn-default">Search</button>
-                            <button type="submit" value="Update" name="action" class="btn btn-default">Update</button>
-                            <button type="submit" value="Create" name="action" class="btn btn-default">Create</button>
+                            <button type="submit" value="Search" name="action"
+                                    class="btn btn-default">Search</button>
+                            <button type="submit" value="Update" name="action"
+                                    class="btn btn-default">Update</button>
+                            <button type="submit" value="Create" name="action"
+                                    class="btn btn-default">Create</button>
                         </div>
                     </form>
                 </div>

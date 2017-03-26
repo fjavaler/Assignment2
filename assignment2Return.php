@@ -34,11 +34,11 @@ $action = $_POST['action'];
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-        </script>
         <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+        <script src="Assignment2/js/jquery-3.1.1.min.js">
+        </script>
+        <!-- Latest compiled JavaScript -->
+        <script src="Assignment2/js/bootstrap.min.js">
         </script>
         <title>Assignment 2</title>
         <meta charset="UTF-8">
@@ -80,126 +80,123 @@ $action = $_POST['action'];
 
         <!-- Footer and form -->
         <div class="container" id="footerContainer">
-            <?php
-            switch ($action)
-            {
-                case "Create":
-                    $insert = "INSERT INTO `Assignment2`.`FriendDB` (`Username`, `First_Name`, "
-                            . "`Last_Name`, `Phone_Number`, `Address`, `City`, `State`, `Zip`, "
-                            . "`Birthdate`, `Password`, `Sex`, `Relationship`) "
-                            . "VALUES ( '$username', '$first', '$last', '$phone', '$address', "
-                            . "'$city', '$state', '$zip', '$birthDate', '$password', '$sex', "
-                            . "'$relationship')";
-                    $success = $con->query($insert);
-                    if ($success == FALSE)
-                    {
-                        $failmess = "Whole query " . $insert . "<br>";
-                        echo $failmess;
-                        die('Invalid query: ' . mysqli_error($con));
-                    } else
-                    {
-                        echo "Friend or family member was added<br>";
-                        echo "<br><br><a href='assignment2.php'><span id='span'><b>Back</b></span></a>";
-                    }
-                    break;
-
-                case "Update":
-                    $update = "";
-                    break;
-
-                case "Search":
-                    if ($first != '')
-                    {
-                        //look for matching first name
-                        $search = "SELECT `First_Name`, `Last_Name`, `Phone_Number`, `Username`, "
-                                . "`Address`, `City`, `State`, `Zip`, `Birthdate`, `Sex`, "
-                                . "`Relationship` FROM `Assignment2` . `FriendDB` "
-                                . "WHERE `First_Name` = '$first';";
-                        $return = $con->query($search);
-                        if (mysql_num_rows($return) == 0)
-                        {
-                            if ($return == false)
-                            {
-                                die('Invalid query: ' . mysqli_error($con));
-                            }
-                            $message = "No one with the first name " . $first . " was found.<br>";
-                            echo $message;
-                        } else
-                        {
-                            echo "<table class=\"table\"><th>Username</th><th>First Name</th>"
-                            . "<th>Last Name</th><th>Phone Number</th><th>Address</th><th>City</th>"
-                            . "<th>State</th><th>Zip</th><th>Birth Date</th><th>Sex</th>"
-                            . "<th>Relationship</th>";
-                            while ($row = $return->fetch_assoc())
-                            {
-                                echo "<tr><td>" . $row['Username']
-                                . "</td><td>" . $row['First_Name']
-                                . "</td><td>" . $row['Last_Name']
-                                . "</td><td>" . $row['Phone_Number']
-                                . "</td><td>" . $row['Address']
-                                . "</td><td>" . $row['City']
-                                . "</td><td>" . $row['State']
-                                . "</td><td>" . $row['Zip']
-                                . "</td><td>" . $row['Birthdate']
-                                . "</td><td>" . $row['Sex']
-                                . "</td><td>" . $row['Relationship']
-                                . "</td></tr>";
-                            }
-                            echo "</tbody></table>";
-                        }
-                        break;
-                    } else if ($first = "" && $last != '')
-                    {
-                        //look for matching last name
-                        $search2 = "SELECT `First_Name`, `Last_Name`, `Phone_Number`, "
-                                . "`Username`, `Address`, `City`, `State`, `Zip`, `Birthdate`, "
-                                . "`Sex`, `Relationship` FROM `Assignment2` . `FriendDB` "
-                                . "WHERE `Last_Name` = '$last';";
-                        $return2 = $con->query($search2);
-                        if (mysql_num_rows($return2) == 0)
-                        {
-                            if ($return2 == false)
-                            {
-                                die('Invalid query: ' . mysqli_error($con));
-                            }
-                            $message2 = "No one with the first name " . $last . " was found.<br>";
-                            echo $message2;
-                        } else
-                        {
-                            echo "<table class=\"table\"><th>Username</th><th>First Name</th>"
-                            . "<th>Last Name</th><th>Phone Number</th><th>Address</th><th>City</th>"
-                            . "<th>State</th><th>Zip</th><th>Birth Date</th><th>Sex</th>"
-                            . "<th>Relationship</th>";
-                            while ($row2 = $return2->fetch_assoc())
-                            {
-                                echo "<tr><td>" . $row2['Username']
-                                . "</td><td>" . $row2['First_Name']
-                                . "</td><td>" . $row2['Last_Name']
-                                . "</td><td>" . $row2['Phone_Number']
-                                . "</td><td>" . $row2['Address']
-                                . "</td><td>" . $row2['City']
-                                . "</td><td>" . $row2['State']
-                                . "</td><td>" . $row2['Zip']
-                                . "</td><td>" . $row2['Birthdate']
-                                . "</td><td>" . $row2['Sex']
-                                . "</td><td>" . $row2['Relationship']
-                                . "</td></tr>";
-                            }
-                            echo "</tbody></table>";
-                        }
-                        break;
-                    }
-                default:
-                    echo "An unexpected error occurred. Pleases try again.";
-                    break;
-            }
-            mysqli_close($con);
-            echo "<a href='assignment2.php'><span id='span'><b>Back</b></span></a>";
-            ?>
-        </div>
-
-        <div class="container">
             <footer>
+                <?php
+                switch ($action)
+                {
+                    case "Create":
+                        $insert = "INSERT INTO `Assignment2`.`FriendDB` (`Username`, `First_Name`, "
+                                . "`Last_Name`, `Phone_Number`, `Address`, `City`, `State`, `Zip`, "
+                                . "`Birthdate`, `Password`, `Sex`, `Relationship`) "
+                                . "VALUES ( '$username', '$first', '$last', '$phone', '$address', "
+                                . "'$city', '$state', '$zip', '$birthDate', '$password', '$sex', "
+                                . "'$relationship')";
+                        $success = $con->query($insert);
+                        if ($success == FALSE)
+                        {
+                            $failmess = "Whole query " . $insert . "<br>";
+                            echo $failmess;
+                            die('Invalid query: ' . mysqli_error($con));
+                        } else
+                        {
+                            echo "Friend or family member was added<br>";
+                            echo "<br><br><a href='assignment2.php'><span id='span'><b>Back</b></span></a>";
+                        }
+                        break;
+
+                    case "Update":
+                        $update = "";
+                        break;
+
+                    case "Search":
+                        if ($first != '')
+                        {
+                            //look for matching first name
+                            $search = "SELECT `First_Name`, `Last_Name`, `Phone_Number`, `Username`, "
+                                    . "`Address`, `City`, `State`, `Zip`, `Birthdate`, `Sex`, "
+                                    . "`Relationship` FROM `Assignment2` . `FriendDB` "
+                                    . "WHERE `First_Name` = '$first';";
+                            $return = $con->query($search);
+                            if (mysql_num_rows($return) == 0)
+                            {
+                                if ($return == false)
+                                {
+                                    die('Invalid query: ' . mysqli_error($con));
+                                }
+                                $message = "No one with the first name " . $first . " was found.<br>";
+                                echo $message;
+                            } else
+                            {
+                                echo "<table class=\"table\"><th>Username</th><th>First Name</th>"
+                                . "<th>Last Name</th><th>Phone Number</th><th>Address</th><th>City</th>"
+                                . "<th>State</th><th>Zip</th><th>Birth Date</th><th>Sex</th>"
+                                . "<th>Relationship</th>";
+                                while ($row = $return->fetch_assoc())
+                                {
+                                    echo "<tr><td>" . $row['Username']
+                                    . "</td><td>" . $row['First_Name']
+                                    . "</td><td>" . $row['Last_Name']
+                                    . "</td><td>" . $row['Phone_Number']
+                                    . "</td><td>" . $row['Address']
+                                    . "</td><td>" . $row['City']
+                                    . "</td><td>" . $row['State']
+                                    . "</td><td>" . $row['Zip']
+                                    . "</td><td>" . $row['Birthdate']
+                                    . "</td><td>" . $row['Sex']
+                                    . "</td><td>" . $row['Relationship']
+                                    . "</td></tr>";
+                                }
+                                echo "</tbody></table>";
+                            }
+                            break;
+                        } else if ($first = "" && $last != '')
+                        {
+                            //look for matching last name
+                            $search2 = "SELECT `First_Name`, `Last_Name`, `Phone_Number`, "
+                                    . "`Username`, `Address`, `City`, `State`, `Zip`, `Birthdate`, "
+                                    . "`Sex`, `Relationship` FROM `Assignment2` . `FriendDB` "
+                                    . "WHERE `Last_Name` = '$last';";
+                            $return2 = $con->query($search2);
+                            if (mysql_num_rows($return2) == 0)
+                            {
+                                if ($return2 == false)
+                                {
+                                    die('Invalid query: ' . mysqli_error($con));
+                                }
+                                $message2 = "No one with the first name " . $last . " was found.<br>";
+                                echo $message2;
+                            } else
+                            {
+                                echo "<table class=\"table\"><th>Username</th><th>First Name</th>"
+                                . "<th>Last Name</th><th>Phone Number</th><th>Address</th><th>City</th>"
+                                . "<th>State</th><th>Zip</th><th>Birth Date</th><th>Sex</th>"
+                                . "<th>Relationship</th>";
+                                while ($row2 = $return2->fetch_assoc())
+                                {
+                                    echo "<tr><td>" . $row2['Username']
+                                    . "</td><td>" . $row2['First_Name']
+                                    . "</td><td>" . $row2['Last_Name']
+                                    . "</td><td>" . $row2['Phone_Number']
+                                    . "</td><td>" . $row2['Address']
+                                    . "</td><td>" . $row2['City']
+                                    . "</td><td>" . $row2['State']
+                                    . "</td><td>" . $row2['Zip']
+                                    . "</td><td>" . $row2['Birthdate']
+                                    . "</td><td>" . $row2['Sex']
+                                    . "</td><td>" . $row2['Relationship']
+                                    . "</td></tr>";
+                                }
+                                echo "</tbody></table>";
+                            }
+                            break;
+                        }
+                    default:
+                        echo "An unexpected error occurred. Pleases try again.";
+                        break;
+                }
+                mysqli_close($con);
+                echo "<a href='assignment2.php'><span id='span'><b>Back</b></span></a>";
+                ?>
                 <div class="container" id="copyright">
                     Copyright &copy; 2017 - All rights reserved - Fred Javalera
                 </div>

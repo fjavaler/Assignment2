@@ -134,3 +134,8 @@ table
 {
     font-family: 'Gloria Hallelujah', cursive;
 }
+
+#footerContainer.container
+{
+    width: 100%;
+}
