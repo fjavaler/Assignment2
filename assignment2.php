@@ -7,6 +7,85 @@
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
         </script>
+        <script type="text/javascript">
+            // Form validation code will come here.
+            function validate()
+            {
+                //first
+                if (document.myForm.first.value == "")
+                {
+                    alert("Please provide your first name!");
+                    document.myForm.first.focus();
+                    return false;
+                }
+                //last
+                if (document.myForm.last.value == "")
+                {
+                    alert("Please provide your last name!");
+                    document.myForm.last.focus();
+                    return false;
+                }
+                //city
+                if (document.myForm.city.value == "")
+                {
+                    alert("Please provide your city!");
+                    document.myForm.city.focus();
+                    return false;
+                }
+                //state
+                if (document.myForm.state.value == "")
+                {
+                    alert("Please provide your state!");
+                    document.myForm.state.focus();
+                    return false;
+                }
+                //zip
+                if (document.myForm.zip.value == "" ||
+                        isNaN(document.myForm.zip.value) ||
+                        document.myForm.zip.value.length != 5)
+                {
+                    alert("Please provide your zip in the format #####!");
+                    document.myForm.zip.focus();
+                    return false;
+                }
+                //phone
+                if (document.myForm.phone.value == "")
+                {
+                    alert("Please provide your phone!");
+                    document.myForm.phone.focus();
+                    return false;
+                }
+                //address
+                if (document.myForm.address.value == "")
+                {
+                    alert("Please provide your address!");
+                    document.myForm.address.focus();
+                    return false;
+                }
+                //username
+                if (document.myForm.username.value == "")
+                {
+                    alert("Please provide your username!");
+                    document.myForm.username.focus();
+                    return false;
+                }
+                //password
+                if (document.myForm.password.value == "")
+                {
+                    alert("Please provide your password!");
+                    document.myForm.password.focus();
+                    return false;
+                }
+                //relationship
+                if (document.myForm.relationship.value == "")
+                {
+                    alert("Please provide your relationship!");
+                    document.myForm.relationship.focus();
+                    return false;
+                }
+                return(true);
+            }
+        </script>
         <title>Assignment 2</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -52,7 +131,7 @@
                 <p>Or feel free to create an account! Just fill out all of the fields below.</p>
                 <br><br>
                 <div class="container col-lg-3" id="tan">
-                    <form style="margin:auto;width:90%" method="post" role="form" action="assignment2Return.php">
+                    <form style="margin:auto;width:90%" method="post" role="form" name="myForm" action="assignment2Return.php">
                         <div class="container">
                             <div class="form-group">
                                 <label for="first">First Name:</label>
@@ -184,7 +263,7 @@
 
         <!--copyright row-->
         <div class="container" id="copyright">
-            Copyright &copy; 2017 - All rights reserved - Fred Javalera
+            Copyright &copy; 2017 - All rights reserved - Frederick Javalera
         </div>
     </body>
 </html>
