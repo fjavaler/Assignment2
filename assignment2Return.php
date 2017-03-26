@@ -2,12 +2,12 @@
 require_once 'DataBaseConnection.php';
 
 $first = htmlentities($_POST['first']);
-$first = stringtolower($first);
-$first = ucwords($first);
+//$first = stringtolower($first);
+//$first = ucwords($first);
 
 $last = htmlentities($_POST['last']);
-$last = stringtolower($last);
-$last = ucwords($last);
+//$last = stringtolower($last);
+//$last = ucwords($last);
 
 $phone = htmlentities($_POST['phone']);
 
@@ -138,8 +138,7 @@ $action = $_POST['action'];
                             echo "</tbody></table>";
                         }
                         break;
-                    }
-                    if ($last != '')
+                    } else if ($first = "" && $last != '')
                     {
                         //look for matching last name
                         $search2 = "SELECT `First_Name`, `Last_Name`, `Phone_Number`, `Username`, `Address`, `City`, `State`, `Zip`, `Birthdate`, `Sex`, `Relationship` FROM `Assignment2` . `FriendDB` WHERE `Last_Name` = '$last';";
