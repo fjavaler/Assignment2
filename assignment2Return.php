@@ -112,13 +112,13 @@ $action = $_POST['action'];
                     break;
 
                 case "Update":
-//                            $update = "";
+                    $update = "";
                     break;
 
                 case "Search":
                     if ($first != '')
                     {
-//                            look for matching first name
+                        //look for matching first name
                         $search = "SELECT `First_Name`, `Last_Name`, `Phone_Number`, `Username`, `Address`, `City`, `State`, `Zip`, `Birthdate`, `Sex`, `Relationship` FROM `Assignment2` . `FriendDB` WHERE `First_Name` = '$first';";
                         $return = $con->query($search);
                         if ($return == FALSE)
@@ -128,29 +128,29 @@ $action = $_POST['action'];
                             die('Invalid query: ' . mysqli_error($con));
                         } else
                         {
-//                            echo "<table class=\"table\"><th>Username</th><th>First Name</th><th>Last Name</th><th>Phone Number</th><th>Address</th><th>City</th><th>State</th><th>Zip</th><th>Birth Date</th><th>Sex</th><th>Relationship</th>";
-//                            while ($row = $return->fetch_assoc())
-//                            {
-//                                echo "<tr><td>" . $row['Username']
-//                                . "</td><td>" . $row['First_Name']
-//                                . "</td><td>" . $row['Last_Name']
-//                                . "</td><td>" . $row['Phone_Number']
-//                                . "</td><td>" . $row['Address']
-//                                . "</td><td>" . $row['City']
-//                                . "</td><td>" . $row['State']
-//                                . "</td><td>" . $row['Zip']
-//                                . "</td><td>" . $row['Birthdate']
-//                                . "</td><td>" . $row['Sex']
-//                                . "</td><td>" . $row['Relationship']
-//                                . "</td></tr>";
-//                            }
-//                            echo "</tbody></table>";
+                            echo "<table class=\"table\"><th>Username</th><th>First Name</th><th>Last Name</th><th>Phone Number</th><th>Address</th><th>City</th><th>State</th><th>Zip</th><th>Birth Date</th><th>Sex</th><th>Relationship</th>";
+                            while ($row = $return->fetch_assoc())
+                            {
+                                echo "<tr><td>" . $row['Username']
+                                . "</td><td>" . $row['First_Name']
+                                . "</td><td>" . $row['Last_Name']
+                                . "</td><td>" . $row['Phone_Number']
+                                . "</td><td>" . $row['Address']
+                                . "</td><td>" . $row['City']
+                                . "</td><td>" . $row['State']
+                                . "</td><td>" . $row['Zip']
+                                . "</td><td>" . $row['Birthdate']
+                                . "</td><td>" . $row['Sex']
+                                . "</td><td>" . $row['Relationship']
+                                . "</td></tr>";
+                            }
+                            echo "</tbody></table>";
                         }
                         break;
                     }
                     if ($last != '')
                     {
-//                            look for matching last name
+                        //look for matching last name
                         $search2 = "SELECT `First_Name`, `Last_Name`, `Phone_Number`, `Username`, `Address`, `City`, `State`, `Zip`, `Birthdate`, `Sex`, `Relationship` FROM `Assignment2` . `FriendDB` WHERE `Last_Name` = '$last';";
                         $return2 = $con->query($search2);
                         if ($return2 == FALSE)
@@ -160,23 +160,23 @@ $action = $_POST['action'];
                             die('Invalid query: ' . mysqli_error($con));
                         } else
                         {
-//                            echo "<table class=\"table\"><th>Username</th><th>First Name</th><th>Last Name</th><th>Phone Number</th><th>Address</th><th>City</th><th>State</th><th>Zip</th><th>Birth Date</th><th>Sex</th><th>Relationship</th>";
-//                            while ($row2 = $return2->fetch_assoc())
-//                            {
-//                                echo "<tr><td>" . $row2['Username']
-//                                . "</td><td>" . $row2['First_Name']
-//                                . "</td><td>" . $row2['Last_Name']
-//                                . "</td><td>" . $row2['Phone_Number']
-//                                . "</td><td>" . $row2['Address']
-//                                . "</td><td>" . $row2['City']
-//                                . "</td><td>" . $row2['State']
-//                                . "</td><td>" . $row2['Zip']
-//                                . "</td><td>" . $row2['Birthdate']
-//                                . "</td><td>" . $row2['Sex']
-//                                . "</td><td>" . $row2['Relationship']
-//                                . "</td></tr>";
-//                            }
-//                            echo "</tbody></table>";
+                            echo "<table class=\"table\"><th>Username</th><th>First Name</th><th>Last Name</th><th>Phone Number</th><th>Address</th><th>City</th><th>State</th><th>Zip</th><th>Birth Date</th><th>Sex</th><th>Relationship</th>";
+                            while ($row2 = $return2->fetch_assoc())
+                            {
+                                echo "<tr><td>" . $row2['Username']
+                                . "</td><td>" . $row2['First_Name']
+                                . "</td><td>" . $row2['Last_Name']
+                                . "</td><td>" . $row2['Phone_Number']
+                                . "</td><td>" . $row2['Address']
+                                . "</td><td>" . $row2['City']
+                                . "</td><td>" . $row2['State']
+                                . "</td><td>" . $row2['Zip']
+                                . "</td><td>" . $row2['Birthdate']
+                                . "</td><td>" . $row2['Sex']
+                                . "</td><td>" . $row2['Relationship']
+                                . "</td></tr>";
+                            }
+                            echo "</tbody></table>";
                         }
                         break;
                     }
@@ -189,10 +189,12 @@ $action = $_POST['action'];
             ?>
         </div>
 
-        <footer>
-            <div class="container" id="copyright">
-                Copyright &copy; 2017 - All rights reserved - Fred Javalera
-            </div>
-        </footer>
+        <div class="container">
+            <footer>
+                <div class="container" id="copyright">
+                    Copyright &copy; 2017 - All rights reserved - Frederick Javalera this is a test
+                </div>
+            </footer>
+        </div>
     </body>
 </html>
