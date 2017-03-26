@@ -92,7 +92,12 @@ $action = $_POST['action'];
             switch ($action)
             {
                 case "Create":
-                    $insert = "INSERT INTO `Assignment2`.`FriendDB` (`Username`, `First_Name`, `Last_Name`, `Phone_Number`, `Address`, `City`, `State`, `Zip`, `Birthdate`, `Password`, `Sex`, `Relationship`) VALUES ( '$username', '$first', '$last', '$phone', '$address', '$city', '$state', '$zip', '$birthDate', '$password', '$sex', '$relationship')";
+                    $insert = "INSERT INTO `Assignment2`.`FriendDB` (`Username`, `First_Name`, "
+                            . "`Last_Name`, `Phone_Number`, `Address`, `City`, `State`, `Zip`, "
+                            . "`Birthdate`, `Password`, `Sex`, `Relationship`) "
+                            . "VALUES ( '$username', '$first', '$last', '$phone', '$address', "
+                            . "'$city', '$state', '$zip', '$birthDate', '$password', '$sex', "
+                            . "'$relationship')";
                     $success = $con->query($insert);
                     if ($success == FALSE)
                     {
@@ -123,24 +128,25 @@ $action = $_POST['action'];
                             die('Invalid query: ' . mysqli_error($con));
                         } else
                         {
-                            echo "<table class=\"table\"><th>Username</th><th>First Name</th><th>Last Name</th><th>Phone Number</th><th>Address</th><th>City</th><th>State</th><th>Zip</th><th>Birth Date</th><th>Sex</th><th>Relationship</th>";
-                            while ($row = $return->fetch_assoc())
-                            {
-                                echo "<tr><td>" . $row['Username']
-                                . "</td><td>" . $row['First_Name']
-                                . "</td><td>" . $row['Last_Name']
-                                . "</td><td>" . $row['Phone_Number']
-                                . "</td><td>" . $row['Address']
-                                . "</td><td>" . $row['City']
-                                . "</td><td>" . $row['State']
-                                . "</td><td>" . $row['Zip']
-                                . "</td><td>" . $row['Birthdate']
-                                . "</td><td>" . $row['Sex']
-                                . "</td><td>" . $row['Relationship']
-                                . "</td></tr>";
-                            }
-                            echo "</tbody></table>";
+//                            echo "<table class=\"table\"><th>Username</th><th>First Name</th><th>Last Name</th><th>Phone Number</th><th>Address</th><th>City</th><th>State</th><th>Zip</th><th>Birth Date</th><th>Sex</th><th>Relationship</th>";
+//                            while ($row = $return->fetch_assoc())
+//                            {
+//                                echo "<tr><td>" . $row['Username']
+//                                . "</td><td>" . $row['First_Name']
+//                                . "</td><td>" . $row['Last_Name']
+//                                . "</td><td>" . $row['Phone_Number']
+//                                . "</td><td>" . $row['Address']
+//                                . "</td><td>" . $row['City']
+//                                . "</td><td>" . $row['State']
+//                                . "</td><td>" . $row['Zip']
+//                                . "</td><td>" . $row['Birthdate']
+//                                . "</td><td>" . $row['Sex']
+//                                . "</td><td>" . $row['Relationship']
+//                                . "</td></tr>";
+//                            }
+//                            echo "</tbody></table>";
                         }
+                        break;
                     }
                     if ($last != '')
                     {
@@ -154,27 +160,26 @@ $action = $_POST['action'];
                             die('Invalid query: ' . mysqli_error($con));
                         } else
                         {
-                            echo "<table class=\"table\"><th>Username</th><th>First Name</th><th>Last Name</th><th>Phone Number</th><th>Address</th><th>City</th><th>State</th><th>Zip</th><th>Birth Date</th><th>Sex</th><th>Relationship</th>";
-                            while ($row2 = $return2->fetch_assoc())
-                            {
-                                echo "<tr><td>" . $row2['Username']
-                                . "</td><td>" . $row2['First_Name']
-                                . "</td><td>" . $row2['Last_Name']
-                                . "</td><td>" . $row2['Phone_Number']
-                                . "</td><td>" . $row2['Address']
-                                . "</td><td>" . $row2['City']
-                                . "</td><td>" . $row2['State']
-                                . "</td><td>" . $row2['Zip']
-                                . "</td><td>" . $row2['Birthdate']
-                                . "</td><td>" . $row2['Sex']
-                                . "</td><td>" . $row2['Relationship']
-                                . "</td></tr>";
-                            }
-                            echo "</tbody></table>";
+//                            echo "<table class=\"table\"><th>Username</th><th>First Name</th><th>Last Name</th><th>Phone Number</th><th>Address</th><th>City</th><th>State</th><th>Zip</th><th>Birth Date</th><th>Sex</th><th>Relationship</th>";
+//                            while ($row2 = $return2->fetch_assoc())
+//                            {
+//                                echo "<tr><td>" . $row2['Username']
+//                                . "</td><td>" . $row2['First_Name']
+//                                . "</td><td>" . $row2['Last_Name']
+//                                . "</td><td>" . $row2['Phone_Number']
+//                                . "</td><td>" . $row2['Address']
+//                                . "</td><td>" . $row2['City']
+//                                . "</td><td>" . $row2['State']
+//                                . "</td><td>" . $row2['Zip']
+//                                . "</td><td>" . $row2['Birthdate']
+//                                . "</td><td>" . $row2['Sex']
+//                                . "</td><td>" . $row2['Relationship']
+//                                . "</td></tr>";
+//                            }
+//                            echo "</tbody></table>";
                         }
+                        break;
                     }
-                    break;
-
                 default:
                     echo "An unexpected error occurred. Pleases try again.";
                     break;
