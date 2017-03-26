@@ -1,42 +1,43 @@
 <?php
 require_once 'DataBaseConnection.php';
-//$first = htmlentities($_POST['first']);
-//$first = stringtolower($_POST['first']);
-//$first = ucwords($_POST['first']);
-$first = $_POST['first']; //test
-//$last = htmlentities($_POST['last']);
-//$last = stringtolower($_POST['last']);
-//$last = ucwords($_POST['last']);
-$last = $_POST['last'];
+$first = htmlentities($_POST['first']);
+$first = stringtolower($_POST['first']);
+$first = ucwords($_POST['first']);
+//$first = $_POST['first'];
 
-//$phone = htmlentities($_POST['phone']);
-$phone = $_POST['phone'];
+$last = htmlentities($_POST['last']);
+$last = stringtolower($_POST['last']);
+$last = ucwords($_POST['last']);
+//$last = $_POST['last'];
 
-//$address = htmlentities($_POST['address']);
-$address = $_POST['address'];
+$phone = htmlentities($_POST['phone']);
+//$phone = $_POST['phone'];
 
-//$city = htmlentities($_POST['city']);
-$city = $_POST['city'];
+$address = htmlentities($_POST['address']);
+//$address = $_POST['address'];
 
-//$state = htmlentities($_POST['state']);
-$state = $_POST['state'];
+$city = htmlentities($_POST['city']);
+//$city = $_POST['city'];
 
-//$zip = htmlentities($_POST['zip']);
-$zip = $_POST['zip'];
+$state = htmlentities($_POST['state']);
+//$state = $_POST['state'];
+
+$zip = htmlentities($_POST['zip']);
+//$zip = $_POST['zip'];
 
 $birthDate = $_POST['birthDate'];
 
-//$username = htmlentities($_POST['username']);
-$username = $_POST['username'];
+$username = htmlentities($_POST['username']);
+//$username = $_POST['username'];
 
-//$password = htmlentities($_POST['password']);
-$password = $_POST['password'];
+$password = htmlentities($_POST['password']);
+//$password = $_POST['password'];
 
-//$sex = htmlentities($_POST['sex']);
-$sex = $_POST['sex'];
+$sex = htmlentities($_POST['sex']);
+//$sex = $_POST['sex'];
 
-//$relationship = htmlentities($_POST['relationship']);
-$relationship = $_POST['relationship'];
+$relationship = htmlentities($_POST['relationship']);
+//$relationship = $_POST['relationship'];
 
 $action = $_POST['action'];
 ?>
@@ -192,7 +193,7 @@ $action = $_POST['action'];
         <div class="container">
             <footer>
                 <div class="container" id="copyright">
-                    Copyright &copy; 2017 - All rights reserved - Frederick Javalera this is a test
+                    Copyright &copy; 2017 - All rights reserved - Frederick Javalera
                 </div>
             </footer>
         </div>
