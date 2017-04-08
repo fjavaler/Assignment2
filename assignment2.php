@@ -179,7 +179,7 @@
         
         <!--copyright row-->
         <div class="container" id="copyright">
-            Copyright &copy; 2017 - All rights reserved - Frederick Javalera this is a test
+            Copyright &copy; 2017 - All rights reserved - Frederick Javalera
         </div>
     </body>
 </html>
