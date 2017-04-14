@@ -18,7 +18,7 @@
     </head>
     <body>
         <!-- !PAGE CONTENT! -->
-        <div class="w3-container" id="picAndBackground">
+        <div class="container-fluid" id="pageContent">
             <!-- Header -->
             <header class="w3-container w3-xlarge w3-padding-18">
                 <a href="/myWebPage.php" class="w3-left w3-btn w3-blue-grey">Home</a>
@@ -32,7 +32,7 @@
             </header>
 
             <!-- Photo -->
-            <div class="w3-row">
+            <div class="w3-row container-fluid" id="imgContainer">
                 <img src="/images/friendsAndFamily.png" id="friendsPic" class="img-rounded" alt="Friends and Family">
             </div>
         </div>
