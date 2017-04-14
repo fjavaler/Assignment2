@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
         <title>Assignment 2</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,29 +13,32 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
         <link rel="shortcut icon" href="images/favicon.ico"/>
-        <script src="js/bootstrap.min.js" type="text/javascript">
-        </script>
-        <script src="js/jquery-3.1.1.min.js" type="text/javascript">
-        </script>
     </head>
     <body>
         <!-- !PAGE CONTENT! -->
         <div class="container-fluid" id="pageContent">
             <!-- Header -->
-            <header class="w3-container w3-xlarge w3-padding-18">
-                <a href="/myWebPage.php" class="w3-left w3-btn w3-blue-grey">Home</a>
-
-                <a href="#about" class="w3-right w3-btn w3-blue-grey">About</a>
-                <a href="/exercises.php" class="w3-right w3-btn w3-blue-grey">Exercises</a>
-                <a href="/e-commerce.php" class="w3-right w3-btn w3-blue-grey">E-commerce</a>
-                <a href="/assignment3.php" class="w3-right w3-btn w3-blue-grey">Assignment 3</a>
-                <a href="/assignment2.php" class="w3-right w3-btn w3-blue-grey">Assignment 2</a>
-                <a href="/assignment1.php" class="w3-right w3-btn w3-blue-grey">Assignment 1</a>
-            </header>
+            <nav class="navbar navbar-default navbar-collapse" id="navbar">
+                <div class='navbar-header'>
+                    <div class='btn-group btn-group-justified' role='group' id="navButtons">
+                        <a href="/myWebPage.php" role="button" class="btn btn-lg btn-secondary" id="navButton">Home</a>
+                        <a href="#about" role="button" class="btn btn-lg btn-secondary" id="navButton">About</a>
+                        <a href="/assignment1.php" role="button" class="btn btn-lg btn-secondary" id="navButton">Assignment 1</a>
+                        <a href="/assignment2.php" role="button" class="btn btn-lg btn-secondary" id="navButton">Assignment 2</a>
+                        <a href="/assignment3.php" role="button" class="btn btn-lg btn-secondary" id="navButton">Assignment 3</a>
+                        <a href="/e-commerce.php" role="button" class="btn btn-lg btn-secondary" id="navButton">E-commerce</a>
+                        <a href="/exercises.php" role="button" class="btn btn-lg btn-secondary" id="navButton">Exercises</a>
+                    </div>
+                </div>
+            </nav>
 
             <!-- Photo -->
-            <div class="w3-row container-fluid" id="imgContainer">
-                <img src="/images/friendsAndFamily.png" id="friendsPic" class="img-rounded" alt="Friends and Family">
+            <div class="container-fluid" id="imgContainer">
+                <div class="row container-fluid">
+                    <div class="span4"></div>
+                    <div class="span4"></div><img src="/images/friendsAndFamily.png" id="friendsPic" class="img-rounded img-responsive center-block" alt="Friends and Family">
+                    <div class="span4"></div>
+                </div>
             </div>
         </div>
         <div class="container" id="border">

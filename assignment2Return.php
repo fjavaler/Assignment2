@@ -59,20 +59,27 @@ $action = $_POST['action'];
         <!-- !PAGE CONTENT! -->
         <div class="w3-container" id="picAndBackground">
             <!-- Header -->
-            <header class="w3-container w3-xlarge w3-padding-18">
-                <a href="/myWebPage.php" class="w3-left w3-btn w3-blue-grey">Home</a>
-
-                <a href="#about" class="w3-right w3-btn w3-blue-grey">About</a>
-                <a href="/exercises.php" class="w3-right w3-btn w3-blue-grey">Exercises</a>
-                <a href="/e-commerce.php" class="w3-right w3-btn w3-blue-grey">E-commerce</a>
-                <a href="/assignment3.php" class="w3-right w3-btn w3-blue-grey">Assignment 3</a>
-                <a href="/assignment2.php" class="w3-right w3-btn w3-blue-grey">Assignment 2</a>
-                <a href="/assignment1.php" class="w3-right w3-btn w3-blue-grey">Assignment 1</a>
-            </header>
+            <nav class="navbar navbar-default navbar-collapse" id="navbar">
+                <div class='navbar-header'>
+                    <div class='btn-group btn-group-justified' role='group' id="navButtons">
+                        <a href="/myWebPage.php" role="button" class="btn btn-lg btn-secondary" id="navButton">Home</a>
+                        <a href="#about" role="button" class="btn btn-lg btn-secondary" id="navButton">About</a>
+                        <a href="/assignment1.php" role="button" class="btn btn-lg btn-secondary" id="navButton">Assignment 1</a>
+                        <a href="/assignment2.php" role="button" class="btn btn-lg btn-secondary" id="navButton">Assignment 2</a>
+                        <a href="/assignment3.php" role="button" class="btn btn-lg btn-secondary" id="navButton">Assignment 3</a>
+                        <a href="/e-commerce.php" role="button" class="btn btn-lg btn-secondary" id="navButton">E-commerce</a>
+                        <a href="/exercises.php" role="button" class="btn btn-lg btn-secondary" id="navButton">Exercises</a>
+                    </div>
+                </div>
+            </nav>
 
             <!-- Photo -->
-            <div class="w3-row">
-                <img src="/images/friendsAndFamily.png" id="friendsPic" class="img-rounded" alt="Friends and Family">
+            <div class="container-fluid" id="imgContainer">
+                <div class="row container-fluid">
+                    <div class="span4"></div>
+                    <div class="span4"></div><img src="/images/friendsAndFamily.png" id="friendsPic" class="img-rounded img-responsive center-block" alt="Friends and Family">
+                    <div class="span4"></div>
+                </div>
             </div>
         </div>
         <div class="container" id="border">
@@ -117,7 +124,7 @@ $action = $_POST['action'];
                         }
                         else
                         {
-                            echo "<table class=\"table\"><th>Username</th><th>First Name</th><th>Last Name</th><th>Phone Number</th><th>Address</th><th>City</th><th>State</th><th>Zip</th><th>Birth Date</th><th>Sex</th><th>Relationship</th>";
+                            echo "<table class=\"table\"><th><b>Username</b></th><th><b>First Name</b></th><th><b>Last Name</b></th><th><b>Phone Number</b></th><th><b>Address</b></th><th><b>City</b></th><th><b>State</b></th><th><b>Zip</b></th><th><b>Birth Date</b></th><th><b>Sex</b></th><th><b>Relationship</b></th>";
                             while ($row = $return->fetch_assoc())
                             {
                                 echo "<tr><td>" . $row['Username']

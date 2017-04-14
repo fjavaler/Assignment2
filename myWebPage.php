@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
         <title>Welcome to my Website!</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,27 +14,33 @@
         <link rel="shortcut icon" href="images/favicon.ico"/>
         <script src="js/bootstrap.min.js" type="text/javascript">
         </script>
-        <script src="js/jquery.min.js" type="text/javascript">
-        </script>
+
     </head>
     <body>
         <!-- !PAGE CONTENT! -->
-        <div class="w3-content" style="max-width:100%">
+        <div class="container-fluid btn-toolbar" id="pageContent">
             <!-- Header -->
-            <header class="w3-container w3-xlarge w3-padding-18">
-                <a href="/myWebPage.php" class="w3-left w3-btn w3-blue-grey">Home</a>
-
-                <a href="#about" class="w3-right w3-btn w3-blue-grey">About</a>
-                <a href="/exercises.php" class="w3-right w3-btn w3-blue-grey">Exercises</a>
-                <a href="/e-commerce.php" class="w3-right w3-btn w3-blue-grey">E-commerce</a>
-                <a href="/assignment3.php" class="w3-right w3-btn w3-blue-grey">Assignment 3</a>
-                <a href="/assignment2.php" class="w3-right w3-btn w3-blue-grey">Assignment 2</a>
-                <a href="/assignment1.php" class="w3-right w3-btn w3-blue-grey">Assignment 1</a>
-            </header>
+            <nav class="navbar navbar-default navbar-collapse" id="navbar">
+                <div class='navbar-header'>
+                    <div class='btn-group btn-group-justified' role='group' id="navButtons">
+                        <a href="/myWebPage.php" role="button" class="btn btn-lg btn-secondary" id="navButton">Home</a>
+                        <a href="#about" role="button" class="btn btn-lg btn-secondary" id="navButton">About</a>
+                        <a href="/assignment1.php" role="button" class="btn btn-lg btn-secondary" id="navButton">Assignment 1</a>
+                        <a href="/assignment2.php" role="button" class="btn btn-lg btn-secondary" id="navButton">Assignment 2</a>
+                        <a href="/assignment3.php" role="button" class="btn btn-lg btn-secondary" id="navButton">Assignment 3</a>
+                        <a href="/e-commerce.php" role="button" class="btn btn-lg btn-secondary" id="navButton">E-commerce</a>
+                        <a href="/exercises.php" role="button" class="btn btn-lg btn-secondary" id="navButton">Exercises</a>
+                    </div>
+                </div>
+            </nav>
 
             <!-- Photo -->
-            <div class="w3-row">
-                <img class="img-rounded" id="mePic" src="images/me.png" alt="">
+            <div class="container-fluid" id="imgContainer">
+                <div class="row container-fluid">
+                    <div class="span4"></div>
+                    <div class="span4"></div><img class="img-rounded img-responsive center-block" id="mePic" src="images/me.png" alt="">
+                    <div class="span4"></div>
+                </div>
             </div>
         </div>
         <div class="container" id="border">
@@ -45,22 +52,18 @@
             <div id="aboutMeContents" class="container">
                 <div class="container" id="interestsDiv">
                     <div class="card card-inverse" id="cardInverse">
-                        <img class="card-img" src="images/tech.jpg" alt="My Interests">
+                        <img class="card-img img-responsive center-block aboutPics" src="images/tech.jpg" alt="My Interests">
                         <div class="card-img-overlay">
                             <h4 class="card-title"><b>Interests</b></h4>
-                            <p class="card-text">Hi, my name is Fred Javalera.</p>
-                            <p class="card-text">Welcome to my site.</p>
-                            <p class="card-text">I'm into programming and all things
-                                tech.</p>
-                            <p class="card-text">I love learning and outdoor activities like hiking, biking, and running.</p>
-                            <p class="card-text">I'm currently enjoying
-                                learning about web development and hope to gain some cool skills from this class.</p>
+                            <p class="card-text">Hi, my name is Fred Javalera.
+                                <br />Welcome to my site.
+                                <br />I'm into programming and all things tech.</p>
                         </div>
                     </div>
                 </div>
                 <div class="container" id="bookDiv">
                     <div class="card card-inverse" id="cardInverse">
-                        <img class="card-img" src="images/enquiry.jpg" alt="My Favorite Book">
+                        <img class="card-img img-responsive center-block aboutPics" src="images/enquiry.jpg" alt="My Favorite Book">
                         <div class="card-img-overlay">
                             <h4 class="card-title"><b>Book</b></h4>
                             <p class="card-text">My favorite book
@@ -70,7 +73,7 @@
                 </div>
                 <div class="container" id="movieDiv">
                     <div class="card card-inverse" id="cardInverse">
-                        <img class="card-img" src="images/pulpFiction.jpg" alt="My Favorite Movie">
+                        <img class="card-img img-responsive center-block aboutPics" src="images/pulpFiction.jpg" alt="My Favorite Movie">
                         <div class="card-img-overlay">
                             <h4 class="card-title"><b>Movie</b></h4>
                             <p class="card-text"> My favorite movie is <i>Pulp

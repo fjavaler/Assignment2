@@ -208,3 +208,52 @@ footer
     padding-left: 0;
     padding-right: 0;
 }
+
+#imgContainer
+{
+    background-color: #404040;
+    margin-top: 1.5%;
+    margin-bottom: 2%;
+}
+
+#navbar
+{
+    background-color: #607D8B;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: #607D8B;
+}
+
+#toolbar
+{
+    width: 100%;
+}
+
+#navButton:hover
+{
+    background-color: #96aeba;
+}
+
+#navButton
+{
+    color: white;
+}
+
+#navButtons
+{
+    background-color: #607D8B;
+    padding: 0;
+    margin: 0;
+}
+
+.container-fluid
+{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+#pageContent
+{
+    background-color: #607D8B;
+}

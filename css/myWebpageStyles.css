@@ -90,6 +90,7 @@ h2
     border-radius: 5px;
     width: 100px;
     height: 130px;
+    align-content: center;
 }
 
 .card-img-overlay
@@ -193,6 +194,7 @@ h2
     width: 100%;
     padding: 0;
     margin: 0;
+    border: #607D8B;
 }
 
 #toolbar
@@ -203,4 +205,21 @@ h2
 #navButton:hover
 {
     background-color: #96aeba;
+}
+
+#navButton
+{
+    color: white;
+}
+
+#navButtons
+{
+    background-color: #607D8B;
+    padding: 0;
+    margin: 0;
+}
+
+.aboutPics
+{
+    height: 140px !important;
 }
