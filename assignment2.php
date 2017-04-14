@@ -165,7 +165,7 @@
                                 </select>
                             </div>
                         </div>
-                        
+
                         <!--buttons-->
                         <div class="btn-group">
                             <button type="submit" value="Search" name="action" class="btn btn-default">Search</button>
@@ -176,7 +176,7 @@
                 </div>
             </footer>
         </div>
-        
+
         <!--copyright row-->
         <div class="container" id="copyright">
             Copyright &copy; 2017 - All rights reserved - Frederick Javalera
