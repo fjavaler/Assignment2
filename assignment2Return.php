@@ -1,42 +1,44 @@
 <?php
 require_once 'DataBaseConnection.php';
-//$first = htmlentities($_POST['first']);
+$first = $_POST['first'];
+$first = htmlentities($first);
 //$first = stringtolower($_POST['first']);
 //$first = ucwords($_POST['first']);
-$first = $_POST['first']; //test
-//$last = htmlentities($_POST['last']);
+
+$last = $_POST['last'];
+$last = htmlentities($last);
 //$last = stringtolower($_POST['last']);
 //$last = ucwords($_POST['last']);
-$last = $_POST['last'];
+//
 
-//$phone = htmlentities($_POST['phone']);
 $phone = $_POST['phone'];
+//$phone = htmlentities($_POST['phone']);
 
-//$address = htmlentities($_POST['address']);
 $address = $_POST['address'];
+//$address = htmlentities($_POST['address']);
 
-//$city = htmlentities($_POST['city']);
 $city = $_POST['city'];
+//$city = htmlentities($_POST['city']);
 
-//$state = htmlentities($_POST['state']);
 $state = $_POST['state'];
+//$state = htmlentities($_POST['state']);
 
-//$zip = htmlentities($_POST['zip']);
 $zip = $_POST['zip'];
+//$zip = htmlentities($_POST['zip']);
 
 $birthDate = $_POST['birthDate'];
 
-//$username = htmlentities($_POST['username']);
 $username = $_POST['username'];
+//$username = htmlentities($_POST['username']);
 
-//$password = htmlentities($_POST['password']);
 $password = $_POST['password'];
+//$password = htmlentities($_POST['password']);
 
-//$sex = htmlentities($_POST['sex']);
 $sex = $_POST['sex'];
+//$sex = htmlentities($_POST['sex']);
 
-//$relationship = htmlentities($_POST['relationship']);
 $relationship = $_POST['relationship'];
+//$relationship = htmlentities($_POST['relationship']);
 
 $action = $_POST['action'];
 ?>
