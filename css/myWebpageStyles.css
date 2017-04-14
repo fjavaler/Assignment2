@@ -14,22 +14,6 @@ body
     width: 100%;
 }
 
-.w3-row
-{
-    background-color: #404040;
-    padding-top: 5.2%;
-    padding-bottom: 2%;
-    padding-left: 25%;
-}
-
-header.w3-container.w3-xlarge.w3-padding-18
-{
-    background-color: #607D8B;
-    height: 100%;
-    float: left;
-    border-bottom-right-radius: 20px;
-}
-
 #about
 {   
     /*sand*/
@@ -186,10 +170,37 @@ h2
     margin-bottom: 35px;
 }
 
-#idMePic
+#pageContent
 {
-    width: 50%;
-/*    height: 360px;
-    width: 610px;*/
-    height: 50%;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #404040;
+}
+
+#imgContainer
+{
+    background-color: #404040;
+    margin-top: 1.5%;
+    margin-bottom: 2%;
+}
+
+#navbar
+{
+    background-color: #607D8B;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#toolbar
+{
+    width: 100%;
+}
+
+#navButton:hover
+{
+    background-color: #96aeba;
 }
