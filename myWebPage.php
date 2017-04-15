@@ -14,7 +14,6 @@
         <link rel="shortcut icon" href="images/favicon.ico"/>
         <script src="js/bootstrap.min.js" type="text/javascript">
         </script>
-
     </head>
     <body>
         <!-- !PAGE CONTENT! -->
@@ -86,16 +85,16 @@
                 <br><br><p>Feel free to have a look around. Enjoy!</p>
                 <p class="w3-large w3-text-pink">Don't hesitate to contact me!</p>
                 <div class="w3-group">
-                    <label><b>Name</b></label>
+                    <label><b>Name:</b></label>
                     <input class="w3-input w3-border" type="text" required name="Name">
                 </div>
                 <div class="w3-group">
-                    <label><b>Email</b></label>
+                    <label><b>Email:</b></label>
                     <input class="w3-input w3-border" type="text" required name="Email">
                 </div>
                 <div class="w3-group">
-                    <label><b>Message</b></label>
-                    <input class="w3-input w3-border" type="text" required name="Message" id="messageText">
+                    <label for="message">Message:</label>
+                    <textarea class="form-control" rows="5" id="comment"></textarea>
                 </div>
                 <button type="submit" class="w3-btn w3-btn-block w3-padding-12 w3-dark-grey" id="submit">Send</button>
             </form>
