@@ -16,26 +16,27 @@
         <script type="text/javascript">
             function validate()
             {
-                const nameRegex = /[A-Z][a-z]+/;
-                alert("test");
+                const firstRegex = /^[a-zA-Z]+$/;
+                const lastRegex = /^[a-zA-Z]+$/
+                const phoneRegex = /^[0-9]+$/;
                 // first name
-                if (nameRegex.exec(document.myForm.first.value) !== document.myForm.first.value)
+                if (firstRegex.exec(document.myForm.first.value) != document.myForm.first.value)
                 {
-                    alert("Please provide your first name! Oh, and please remember to capitalize the first letter.");
+                    alert("Please provide a valid first name! Oh, and please remember to capitalize the first letter.");
                     document.myForm.first.focus();
                     return false;
                 }
                 // last name
-                if (nameRegex.exec(document.myForm.last.value) === null)
+                if (lastRegex.exec(document.myForm.last.value) != document.myForm.last.value)
                 {
-                    alert("Please provide your last name! Oh, and please remember to capitalize the first letter.");
+                    alert("Please provide a valid last name! Oh, and please remember to capitalize the first letter.");
                     document.myForm.last.focus();
                     return false;
                 }
                 // phone number
-                if (document.myForm.phone.value == "")
+                if (phoneRegex.exec(document.myForm.phone.value) != document.myForm.phone.value)
                 {
-                    alert("Please provide your phone number!");
+                    alert("Please provide a valid phone number!");
                     document.myForm.phone.focus();
                     return false;
                 }
