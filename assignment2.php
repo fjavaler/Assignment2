@@ -13,6 +13,101 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
         <link rel="shortcut icon" href="images/favicon.ico"/>
+        <script type="text/javascript">
+            function validate()
+            {
+                alert("validate called!");
+                var form = document.getElementById("myForm");
+                var firstRegex = new RegExp("/[0-9]+/");
+                // first name
+                if (form.first.value === firstRegex)
+                {
+                    alert("Please provide your first name!");
+                    document.myForm.first.focus();
+                    return false;
+                }
+                // last name
+                if (document.myForm.last.value == "")
+                {
+                    alert("Please provide your last name!");
+                    document.myForm.last.focus();
+                    return false;
+                }
+                // phone number
+                if (document.myForm.phone.value == "")
+                {
+                    alert("Please provide your phone number!");
+                    document.myForm.phone.focus();
+                    return false;
+                }
+                // address
+                if (document.myForm.address.value == "")
+                {
+                    alert("Please provide your address!");
+                    document.myForm.address.focus();
+                    return false;
+                }
+                // city
+                if (document.myForm.city.value == "")
+                {
+                    alert("Please provide your city!");
+                    document.myForm.city.focus();
+                    return false;
+                }
+                // state
+                if (document.myForm.state.value == "")
+                {
+                    alert("Please provide your state!");
+                    document.myForm.state.focus();
+                    return false;
+                }
+                //zip
+                if (document.myForm.zip.value == "" ||
+                        isNaN(document.myForm.zip.value) ||
+                        document.myForm.zip.value.length != 5)
+                {
+                    alert("Please provide your zip in the format #####!");
+                    document.myForm.zip.focus();
+                    return false;
+                }
+                // birthDate
+                if (document.myForm.birthDate.value == "")
+                {
+                    alert("Please provide your birth date!");
+                    document.myForm.birthDate.focus();
+                    return false;
+                }
+                // username
+                if (document.myForm.username.value == "")
+                {
+                    alert("Please provide your username!");
+                    document.myForm.username.focus();
+                    return false;
+                }
+                // password
+                if (document.myForm.password.value == "")
+                {
+                    alert("Please provide your password!");
+                    document.myForm.password.focus();
+                    return false;
+                }
+                // sex
+                if (document.myForm.sex.value == "")
+                {
+                    alert("Please provide your sex!");
+                    document.myForm.sex.focus();
+                    return false;
+                }
+                // relationship
+                if (document.myForm.relationship.value == "")
+                {
+                    alert("Please provide your relationship!");
+                    document.myForm.relationship.focus();
+                    return false;
+                }
+                return(true);
+            }
+        </script>
     </head>
     <body>
         <!-- !PAGE CONTENT! -->
@@ -52,7 +147,7 @@
                 <p>Or feel free to create an account! Just fill out all of the fields below.</p>
                 <br><br>
                 <div class="container col-lg-3" id="tan">
-                    <form style="margin:auto;width:90%" method="post" role="form" action="assignment2Return.php">
+                    <form style="margin:auto;width:90%" method="post" name="myForm" onsubmit="return(validate());" action="assignment2Return.php">
                         <div class="container">
                             <div class="form-group">
                                 <label for="first">First Name:</label>

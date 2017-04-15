@@ -40,6 +40,8 @@ $action = $_POST['action'];
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
         <title>Assignment 2</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -50,10 +52,6 @@ $action = $_POST['action'];
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
         <link rel="shortcut icon" href="images/favicon.ico"/>
-        <script src="js/bootstrap.min.js" type="text/javascript">
-        </script>
-        <script src="js/jquery-3.1.1.min.js" type="text/javascript">
-        </script>
     </head>
     <body>
         <!-- !PAGE CONTENT! -->
