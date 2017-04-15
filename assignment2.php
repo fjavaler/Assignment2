@@ -16,11 +16,9 @@
         <script type="text/javascript">
             function validate()
             {
-                alert("validate called!");
-                var form = document.getElementById("myForm");
                 var firstRegex = new RegExp("/[0-9]+/");
                 // first name
-                if (form.first.value === firstRegex)
+                if (document.myForm.first.value == firstRegex)
                 {
                     alert("Please provide your first name!");
                     document.myForm.first.focus();
