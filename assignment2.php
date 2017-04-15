@@ -16,18 +16,19 @@
         <script type="text/javascript">
             function validate()
             {
-                var nameRegex = /[A-Z][a-zA-Z]*/;
+                const nameRegex = /[A-Z][a-z]+/;
+                alert("test");
                 // first name
-                if (nameRegex.test(document.myForm.first.value) === false)
+                if (nameRegex.exec(document.myForm.first.value) !== document.myForm.first.value)
                 {
-                    alert("Please provide your first name!");
+                    alert("Please provide your first name! Oh, and please remember to capitalize the first letter.");
                     document.myForm.first.focus();
                     return false;
                 }
                 // last name
-                if (document.myForm.last.value == "")
+                if (nameRegex.exec(document.myForm.last.value) === null)
                 {
-                    alert("Please provide your last name!");
+                    alert("Please provide your last name! Oh, and please remember to capitalize the first letter.");
                     document.myForm.last.focus();
                     return false;
                 }
