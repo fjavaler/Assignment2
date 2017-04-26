@@ -113,7 +113,6 @@
         <h1 id="eCommerceH1"><span id="eCommerceText">Login</span></h1>
         <div class="container" id="spacer">
         </div>
-
         <!--copyright row-->
         <div class="container" id="copyright">
             Copyright &copy; 2017 - All rights reserved - Frederick Javalera
