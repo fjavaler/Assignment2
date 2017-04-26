@@ -61,7 +61,6 @@ $action = $_POST['action'];
                 <div class='navbar-header'>
                     <div class='btn-group btn-group-justified' role='group' id="navButtons">
                         <a href="/myWebPage.php" role="button" class="btn btn-lg btn-secondary" id="navButton">Home</a>
-                        <a href="#about" role="button" class="btn btn-lg btn-secondary" id="navButton">About</a>
                         <a href="/assignment1.php" role="button" class="btn btn-lg btn-secondary" id="navButton">Assignment 1</a>
                         <a href="/assignment2.php" role="button" class="btn btn-lg btn-secondary" id="navButton">Assignment 2</a>
                         <a href="/assignment3.php" role="button" class="btn btn-lg btn-secondary" id="navButton">Assignment 3</a>
