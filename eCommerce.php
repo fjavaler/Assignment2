@@ -13,6 +13,25 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
         <link rel="shortcut icon" href="images/favicon.ico"/>
+        <script>
+            function loginfilled()
+            {
+                name = document.getElementById('username').value;
+                password = document.getElementById('password').value;
+                thereturn = true;
+                if (name == "")
+                {
+                    document.getElementById('username').style.borderColor = "red"
+                    thereturn = false;
+                }
+                if (password == "")
+                {
+                    document.getElementById('password').style.borderColor = "red"
+                    thereturn = false;
+                }
+                return thereturn
+            }
+        </script>
     </head>
     <body>
         <!-- !PAGE CONTENT! -->
@@ -47,7 +66,7 @@
                             <div class="panel-body">
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <form id="login-form" action="http://phpoll.com/login/process" method="post" role="form" style="display: block;">
+                                        <form id="login-form" action="eCommerceLoginCheck.php" method="post" role="form" style="display: block;">
                                             <div class="form-group col-sm-12">
                                                 <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
                                             </div>
@@ -61,7 +80,7 @@
                                             <div class="form-group col-sm-12">
                                                 <div class="row">
                                                     <div class="col-sm-6 col-sm-offset-3">
-                                                        <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
+                                                        <input type="submit" name="Submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In" onclick="return loginfilled();">
                                                     </div>
                                                 </div>
                                             </div>
