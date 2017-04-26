@@ -27,7 +27,7 @@ $username = $_POST['username'];
 $username = htmlentities($username);
 
 $password = $_POST['password'];
-$password = htmlentities($password);
+$password = hash("ripemd128", $password);
 
 $sex = $_POST['sex'];
 $sex = htmlentities($sex);
