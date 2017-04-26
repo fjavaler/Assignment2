@@ -25,14 +25,14 @@
                         <a href="/assignment1.php" role="button" class="btn btn-lg btn-secondary" id="navButton">Assignment 1</a>
                         <a href="/assignment2.php" role="button" class="btn btn-lg btn-secondary" id="navButton">Assignment 2</a>
                         <a href="/assignment3.php" role="button" class="btn btn-lg btn-secondary" id="navButton">Assignment 3</a>
-                        <a href="/e-commerce.php" role="button" class="btn btn-lg btn-secondary" id="navButton">E-commerce</a>
+                        <a href="/eCommerce.php" role="button" class="btn btn-lg btn-secondary" id="navButton">E-commerce</a>
                         <a href="/exercises.php" role="button" class="btn btn-lg btn-secondary" id="navButton">Exercises</a>
                     </div>
                 </div>
             </nav>
 
             <!-- Login Prompt -->
-            <div class="container">
+            <div class="container-fluid" id="imgContainer">
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
                         <div class="panel panel-login">
