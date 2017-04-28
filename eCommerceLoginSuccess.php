@@ -31,7 +31,7 @@
                 <div class="row" style="padding-top: 150px; text-align: center; padding-bottom: 150px; color: white">
                     <?php
                     echo $_SESSION['user'] . " has logged in";
-                    echo "<p></p><p></p><p></p><a href='Catalogue.php'><h1>To Shopping</h1></a></p>";
+                    echo "<p></p><p></p><p></p><a href='catalogue.php'><h1>To Shopping</h1></a></p>";
                     ?>
                 </div>
             </div>
