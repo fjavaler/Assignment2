@@ -19,7 +19,6 @@ switch ($action)
         unset($_SESSION['cart']);
         break;
     case "Info":
-        echo "Product ID: " . $product_id;
         $infoNum = $product_id;
         break;
 }
@@ -38,7 +37,7 @@ require_once 'DataBaseConnection.php';
         <div class="form" id="form_container">
             <form action="catalogue.php" method="Post">
                 <div>
-                    <p><span class="text">Please Select a product:</span>
+                    <p><span class="text">Please select one of our items:</span>
                         <select id="Select_Product" name="Select_Product" onchange="productInfo(this.value)" class="select">
                             <option value=""></option>
                             <?php
@@ -87,16 +86,16 @@ require_once 'DataBaseConnection.php';
                         if ($infoNum > 0)
                         {
                             $sql = "SELECT Name, Description, Price, ItemImage FROM Assignment2.Products WHERE ProductID = " . $infoNum;
-                            echo "<table align ='left' width='100%'><tr><th>Name</th><th>Description</th><th>Price</th><th>Image</th></tr>";
+                            echo "<table align ='left' width='100%'><tr><th>Name</th><th>Description</th><th>Price</th><th align='right'>Image</th></tr>";
                             $result = $con->query($sql);
                             if (mysqli_num_rows($result) > 0)
                             {
                                 list($infoname, $infodescription, $infoprice, $infoimage) = mysqli_fetch_row($result);
                                 echo "<tr>";
-                                echo "<td align=\"left\" width=\"450px\">$infoname</td>";
-                                echo "<td align=\"left\" width=\"450px\">$infodescription</td>";
-                                echo "<td align=\"left\" width=\"325px\">" . money_format('%(#8n', $infoprice) . " <td>";
-                                echo "<td align=\"left\" width=\"450px\"><img src='$infoimage' height=\"160\" width=\"160\"></td>";
+                                echo "<td align=\"left\" width=\"150px\">$infoname</td>";
+                                echo "<td align=\"left\" width=\"350px\">$infodescription</td>";
+                                echo "<td align=\"left\" width=\"75px\">" . money_format('%(#8n', $infoprice) . " <td>";
+                                echo "<td align=\"left\"><img src = 'images/$infoimage' height = \"160\" width=\"160\"></td>";
                                 echo "</tr>";
                             }
                             echo "</table>";
