@@ -13,7 +13,7 @@ body
 
     margin:0 auto;
     text-align:left;
-    width:640px;
+    width:900px;
 }
 
 #top
@@ -30,7 +30,6 @@ body
     clear:both;
     color:#999999;
     text-align:center;
-    width:640px;
     padding-bottom: 15px;
     font-size: 85%;
 }
