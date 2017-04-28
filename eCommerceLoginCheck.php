@@ -32,11 +32,11 @@ if ($count == 1)
     $_SESSION['password'] = $mypassword;
     // Register $myusername, $mypassword and redirect to file "login_success.php"
     header("Location:eCommerceLoginSuccess.php");
-    //echo "<a href='Catalogue.php>To Shopping</a>'"
 }
 else
 {
-    header("Location:eCommerce.php");
     $_SESSION['badPass'] ++;
-    //echo "bad password entered.";
+//    header("Location:eCommerce.php");
+    echo ("<p>Incorrect password entered.</p>");
+    echo ("<p><a href='eCommerce.php'>Try again</a><p>");
 }
